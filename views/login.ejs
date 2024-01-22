@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        form {
+    background-color: rgb(239, 243, 231);
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid #333;
+    border-radius: 10px;
+    }
+    .input {
+        margin: 5px;
+    }
+ 
+
+    </style>
+</head>
+<body>
+    <!-- <% if (messages.error) { %>
+        <%= messages.error %>
+        <% } %> -->
+    <form action="/login" method="POST">
+        <div>
+            <h1>Login</h1>
+            <% if (messages.error) { %>
+                <%= messages.error %>
+                <% } %>
+          
+           <div class=" input-left">
+                <!-- Email input -->
+                <div class="input">
+                    <input type="email" id="email" name ="email">
+                    <label for="email">Email</label> 
+                </div>
+                <!-- Password input -->
+                <div class="input">
+                    <input type="password" id="password" name ="password">
+                    <label for="password">Password</label> 
+                </div>
+            </div> 
+            <!-- Submit button -->
+            <button type="submit">Login</button>
+            <!-- Register buttons -->
+            <p><a href="/register">Register</a></p>
+            
+        </div>
+        
+    </form>
+    
+</body>
+</html>
+

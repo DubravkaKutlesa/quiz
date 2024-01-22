@@ -1,0 +1,20 @@
+
+    <%- include('layout/header') %>
+    
+    <main>
+    <div class="container">
+        <h1 class="quiz-title"></h1>
+        <h1 id="question">Question</h1>
+        <ul id="answers">
+            <%- console.log("QuizPage:-",quizdata[0])%>
+        </ul>
+        <button disabled id="next" onclick="nextQuestion()">Next</button>
+        <p id="result"></p>
+    </div>
+
+
+    <script>let questions = <%- JSON.stringify(quizdata) %>;</script>
+    <script src="./quizRender.js"></script>
+    </main>
+
+    <%- include('layout/footer') %>
